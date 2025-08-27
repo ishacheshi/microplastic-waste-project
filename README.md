@@ -1,5 +1,5 @@
 # microplastic-waste-project
-A datasci / statistic project that investigates the correlation between microplastic ingestion rates (via seafood) and a country's proportion of plastic waste.
+An analysis in R to investigates the correlation between microplastic ingestion rates (via seafood) and a country's proportion of plastic waste.
 
 ### Abstract
 Microplastic ingestion is a major health concern, as microplastics can mimic human hormones, increasing risk
