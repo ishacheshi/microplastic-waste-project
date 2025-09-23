@@ -34,6 +34,16 @@ To get data on microplastic concentrations per region, we pulled data from the N
 The microplastic data only has latitude, longitude, and the associated ocean region (like the Indian Ocean.) In order to join the two datasets by country, we used the rnaturalearth library to identify the closest country by distance, and we validated the points visually and by mapping the points with R. One issue with this association is that this does not take into account ocean current movements, as plastic located close to a country does not necessarily mean it came from that country.
 
 ```{r data_cleaning, message=FALSE, echo=FALSE}
+
+# Install if packages not installed
+packages <- c("tidyverse", "janitor", "here", "car", "lmtest", 
+              "sandwich", "stargazer", "gridExtra", "patchwork", 
+              "moments", "psych", "sf", "rnaturalearth", "rnaturalearthdata")
+
+installed <- packages %in% rownames(installed.packages())
+if (any(!installed)) install.packages(packages[!installed])
+lapply(packages, library, character.only = TRUE)
+
 # Load core packages
 library(tidyverse)        
 library(janitor)          
