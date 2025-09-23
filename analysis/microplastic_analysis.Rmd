@@ -49,15 +49,16 @@ library(patchwork)
 library(sf)
 library(rnaturalearth)
 library(rnaturalearthdata)
+library(here)
 
 # Read in microplastics data
-data_2018_2021 <- read.delim("Marine_Microplastics_2018_2021.csv", sep=",", header=TRUE)
+data_2018_2021 <- read.delim(here("data", "Marine_Microplastics_2018_2021.csv"), sep=",", header=TRUE)
 
 # read in total plastic waste emitted per country
-country_plastics <- read.delim("plastic-waste-emitted-to-the-ocean.csv", sep=",", header=TRUE)
+country_plastics <- read.delim(here("data", "plastic-waste-emitted-to-the-ocean.csv"), sep=",", header=TRUE)
 
 # read in gdp per country
-gdp <- read.delim("gdp_2019.csv", sep=",", header=TRUE)
+gdp <- read.delim(here("data", "gdp_2019.csv"), sep=",", header=TRUE)
 
 # Function to associate microplastic points with country
 mp_countries <- function(input_data) {
