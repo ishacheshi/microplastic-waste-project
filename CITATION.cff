@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Microplastic Waste Project"
+version: "1.0.0"
+date-released: 2025-09-23
+authors:
+  - family-names: Cheshire
+    given-names: Ishani
+    affiliation: "University of California, Berkeley"
+  - family-names: Adisoemarta
+    given-names: Indri
+    affiliation: "University of California, Berkeley"
+  - family-names: Moharram
+    given-names: Nadaa
+    affiliation: "University of California, Berkeley"
+license: "MIT"
+url: "https://github.com/yourusername/microplastic-waste-project"
+
