@@ -63,9 +63,9 @@ significant, indicating that there are more variables we needed to look at to ex
 In the future, we hope to look into adding average ocean current speed to our model, as we believe that this
 would have a major impact on the distribution of microplastic particles.
 
-## How to Run
+## How to Run Code
 
-This project is fully contained in a single RMarkdown file: microplastic_final_report.Rmd.
+This project is fully contained in a single RMarkdown file: analysis/microplastic_final_report.Rmd.
 Knitting this file will reproduce all of the analysis and generate the final PDF report. You can either knit 
 
 Requirements
