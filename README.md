@@ -62,3 +62,41 @@ Although our model 2 came close to the required threshold, ultimately none of ou
 significant, indicating that there are more variables we needed to look at to explain microplastic concentration.
 In the future, we hope to look into adding average ocean current speed to our model, as we believe that this
 would have a major impact on the distribution of microplastic particles.
+
+## How to Run
+
+This project is fully contained in a single RMarkdown file: microplastic_final_report.Rmd.
+Knitting this file will reproduce all of the analysis and generate the final PDF report. You can either knit 
+
+Requirements
+
+- R (≥ 4.0.0 recommended)
+- RStudio (optional but recommended)
+- The following R packages:
+
+```
+packages <- c("tidyverse", "janitor", "here", "car", "lmtest", 
+              "sandwich", "stargazer", "gridExtra", "patchwork", 
+              "moments", "psych", "sf", "rnaturalearth", "rnaturalearthdata", "rmarkdown")
+
+installed <- packages %in% rownames(installed.packages())
+if (any(!installed)) install.packages(packages[!installed])
+lapply(packages, library, character.only = TRUE)
+```
+
+### Create Report Using Make
+
+If you have make installed, you can build the report from command line:
+
+```
+make
+```
+
+This runs rmarkdown::render() on the .Rmd file and generates microplastic_final_report.pdf.
+
+To clean up generated files:
+
+```
+make clean
+```
+
